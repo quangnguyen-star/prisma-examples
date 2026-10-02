@@ -1,0 +1,20 @@
+{
+  "base_sha": "caa902a81",
+  "branch": "characterize/caa902a81-20261002T041130Z",
+  "delivered": false,
+  "ended_at": "2026-10-02T04:38:30Z",
+  "exit_code": 50,
+  "heartbeat": "2026-10-02T04:34:26Z",
+  "kind": "charpilot-checkpoint",
+  "label": "host copy of 20261002T041130Z",
+  "language": "nodejs",
+  "pr_base": "latest",
+  "refused": null,
+  "repo": "github.com/quangnguyen-star/prisma-examples",
+  "root_branch": "latest",
+  "round": null,
+  "run": "20261002T041130Z",
+  "stopped": true,
+  "target_dir": ".",
+  "version": 1
+}

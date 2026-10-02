@@ -1,0 +1,19 @@
+{
+  "stage": "0-runner",
+  "runner": "vitest",
+  "detail": "vitest@3.2.6",
+  "action": "as-is",
+  "evidence": [
+    "scripts.test: vitest run",
+    "dependency vitest@3.2.6",
+    "config accelerate/remix-starter/vitest.config.ts",
+    "config databases/cockroachdb/jest.config.js",
+    "config databases/mongodb/jest.config.js",
+    "config databases/sql-server/jest.config.js",
+    "config deployment-platforms/edge/cloudflare-workers/with-d1/vitest.config.ts",
+    "16 test file(s) (databases/cockroachdb/tests/prisma.test.ts, databases/mongodb/tests/prisma.test.ts, databases/sql-server/tests/prisma.test.ts, …)"
+  ],
+  "testFiles": 16,
+  "measuredByStage1": true,
+  "note": null
+}
