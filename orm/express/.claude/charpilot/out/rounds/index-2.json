@@ -1,0 +1,127 @@
+{
+  "step": "derive",
+  "handover": {
+    "packets": 2,
+    "items": 8,
+    "bytesTotal": 88552,
+    "bytesLargest": 56909,
+    "brief": {
+      "budget": 25000,
+      "packets": 2,
+      "over": 2,
+      "overItems": 8,
+      "median": 44276,
+      "largest": 56909,
+      "measuredMax": 69204,
+      "aboveMeasured": 0,
+      "aboveMeasuredItems": 0,
+      "worst": [
+        {
+          "file": "worklist-decisions.packets/packet-02.json",
+          "items": 6,
+          "bytes": 56909,
+          "timesBudget": 2.3
+        },
+        {
+          "file": "worklist-decisions.packets/packet-01.json",
+          "items": 2,
+          "bytes": 31643,
+          "timesBudget": 1.3
+        }
+      ],
+      "notSplit": "NOT SPLIT, DELIBERATELY. A packet is ONE FUNCTION AND ONE READING: two workers on two sides of it pay for that reading twice and can answer from readings that disagree. A split needs D47a — the second worker handed the NOTE, not the file — and a note is served from the round AFTER the one that wrote it, so inside one round there is nothing to hand it. Dealt WHOLE and named here: whole loses no work, a split that drops a side does."
+    },
+    "workers": 1,
+    "concurrency": 1,
+    "workerAgent": "charpilot-worker",
+    "roundBudgetMinutes": 45,
+    "packetMinutes": 4.1,
+    "queue": [
+      {
+        "entry": 1,
+        "packets": 2,
+        "items": 8,
+        "sources": [
+          "src/index.ts"
+        ],
+        "files": [
+          "worklist-decisions.packets/packet-01.json",
+          "worklist-decisions.packets/packet-02.json"
+        ]
+      }
+    ],
+    "dealSays": "THE ROUND IS ALREADY DEALT, AS A QUEUE AND NOT AS BUNDLES. `queue` is 1 entry(ies) in LAUNCH ORDER, largest first. Launch 1 worker(s) on the first 1, hand each one the packet FILES its entry names, and THE MOMENT ONE RETURNS LAUNCH THE NEXT ENTRY. LAUNCH EVERY WORKER AS subagent_type \"charpilot-worker\" — it has no Agent tool, which is what lets this round use the whole concurrency cap. NEVER HAVE MORE THAN 1 IN FLIGHT: count launches minus returns, and launch only when that is below it. If a launch comes back \"Concurrent subagent limit reached\", that entry was NOT worked: put it back at the FRONT of the queue and launch it when the next worker returns. Do not skip it and do not leave it for next round. Do not re-sort it, do not re-deal it, and do not hand one worker several entries up front — it cannot start its second until its first is done, which is how the round's longest packet ends up waiting behind whatever landed beside it. A packet is still never split across workers: every entry hands over WHOLE packet files. MATERIALISE EACH ENTRY AS IT LANDS. Read its submission, record it and move on — do NOT hold the round's consolidation until the slowest worker is back. On run 20260918T073111Z round 5 the last worker finished at 10:25:30 and the parent was still consolidating at 10:34:48: nine minutes single-threaded with every worker idle. THE ROUND'S BUDGET IS 45 MINUTES. Keep launching until the queue is empty or the budget is spent; when it is spent, stop launching, take what has landed, SAY WHICH ENTRIES YOU NEVER LAUNCHED and end the round. They come back next round aimed by a coverage report. A round held open for one worker is the rest of the fan-out idle and no new evidence at all. EVERY ENTRY GOES TO A WORKER, AND TO ONE WORKER ONLY: 1 entry(ies), so 1 launch(es) in all, plus a relaunch only for an entry whose launch came back \"Concurrent subagent limit reached\". This holds in a small round and in a round of one entry: do NOT answer a packet yourself, and do NOT launch a second worker on an entry that already has one. A packet file is the whole job for one worker, and a second reader of it is a second reading of the same source with nothing new to find.",
+    "says": "THIS FILE IS AN INDEX AND CARRIES NO BRIEF. Each entry below names one file that is a WHOLE, SELF-CONTAINED piece of work: open it and you can answer every item in it without opening anything else and without writing a script to take it apart. The packet's roster, its reading plan and every block its items share are at the top of that file, written once. Pick the packet you are going to answer, open that one file, and answer it. The largest is 56909 bytes; the whole round is 88552 bytes, and you never have to read that.",
+    "progress": {
+      "proposed": 0,
+      "blocked": 0,
+      "verifyWaiting": 0,
+      "verifyRecorded": 0,
+      "open": 8,
+      "stalledRounds": 0,
+      "failedRounds": 0,
+      "best": {
+        "proposed": 0,
+        "blocked": 0,
+        "verifyWaiting": 0
+      }
+    },
+    "asks": {
+      "sweep": {
+        "signature": "sweep-domain",
+        "repeated": 0,
+        "run": "20261002T043917Z"
+      },
+      "derive": {
+        "signature": "src/index.ts#124:cond-expr:0 [whenFalse]\nsrc/index.ts#124:cond-expr:0 [whenTrue]\nsrc/index.ts#139:binary-expr:0 [Number(take)]\nsrc/index.ts#139:binary-expr:0 [undefined]\nsrc/index.ts#140:binary-expr:0 [Number(skip)]\nsrc/index.ts#140:binary-expr:0 [undefined]\nsrc/index.ts#75:binary-expr:0 [Number(id)]\nsrc/index.ts#75:binary-expr:0 [undefined]",
+        "repeated": 0,
+        "run": "20261002T043917Z"
+      }
+    },
+    "run": "20261002T043917Z",
+    "answered": {
+      "sweep": {
+        "run": "20261002T043917Z",
+        "sides": {
+          "sweep-domain": 1
+        }
+      }
+    }
+  },
+  "packets": [
+    {
+      "file": "worklist-decisions.packets/packet-01.json",
+      "id": "packet src/index.ts:63:<arg1 of app.put>",
+      "name": "<arg1 of app.put>",
+      "at": "src/index.ts:63",
+      "items": 2,
+      "writes": "answers-d03bc4a89a12.json",
+      "mayBeSplit": false,
+      "carried": 0,
+      "sides": [
+        "src/index.ts#75:binary-expr:0 [Number(id)]",
+        "src/index.ts#75:binary-expr:0 [undefined]"
+      ],
+      "bytes": 31643
+    },
+    {
+      "file": "worklist-decisions.packets/packet-02.json",
+      "id": "packet src/index.ts:121:<arg1 of app.get>",
+      "name": "<arg1 of app.get>",
+      "at": "src/index.ts:121",
+      "items": 6,
+      "writes": "answers-1f515d7f094f.json",
+      "mayBeSplit": false,
+      "carried": 0,
+      "sides": [
+        "src/index.ts#124:cond-expr:0 [whenTrue]",
+        "src/index.ts#124:cond-expr:0 [whenFalse]",
+        "src/index.ts#139:binary-expr:0 [Number(take)]",
+        "src/index.ts#139:binary-expr:0 [undefined]",
+        "src/index.ts#140:binary-expr:0 [Number(skip)]",
+        "src/index.ts#140:binary-expr:0 [undefined]"
+      ],
+      "bytes": 56909
+    }
+  ]
+}

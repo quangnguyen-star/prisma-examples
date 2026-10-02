@@ -1,0 +1,22 @@
+{
+  "stage": "2-dead-code",
+  "scannedAt": "2026-10-02T04:40:51.779Z",
+  "tool": "ts-morph getExportedDeclarations + findReferencesAsNodes",
+  "entrypointsTreatedAsLive": [
+    "/^src\\/index\\.ts$/",
+    "/^src\\/instrumentation\\.ts$/",
+    "/^src\\/server\\.ts$/",
+    "/^src\\/routes\\//"
+  ],
+  "totals": {
+    "deadExports": 0,
+    "deadOnlyReferencedByTests": 0,
+    "testFilesInProject": 1,
+    "srcFilesExamined": 1,
+    "branchSidesInsideThem": 0,
+    "denominator": 8,
+    "correctedDenominator": 8,
+    "deadFunctionIds": 0
+  },
+  "dead": []
+}

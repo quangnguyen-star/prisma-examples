@@ -1,0 +1,166 @@
+{
+  "stage": "6-coverage",
+  "measuredAt": "2026-10-02T04:43:42.735Z",
+  "measured": "the GENERATED characterization suite alone - the existing suite is measured separately and unioned",
+  "envProvenance": "process-env-only",
+  "mode": "mocked",
+  "suitePassed": null,
+  "tests": null,
+  "totals": {
+    "sides": 8,
+    "hitByCharacterization": 0,
+    "hitByExistingSuite": 0,
+    "hitByEither": 0,
+    "stillUncovered": 8,
+    "deadExportSides": 0,
+    "deadExportSidesHit": 0,
+    "correctedSides": 8,
+    "correctedHitByEither": 0,
+    "correctedStillUncovered": 8,
+    "deadExportSidesDeclared": 0,
+    "undeliverableSides": 0,
+    "rulings": {
+      "unreachable": 0,
+      "pipeline_defect": 0,
+      "open": 8
+    },
+    "claimsChecked": 0,
+    "claimsVerified": 0,
+    "claimsFalse": 0,
+    "claimsFalseClosureNotInvoked": 0,
+    "claimsFalsePathNotTaken": 0,
+    "claimsUnmeasurable": 0,
+    "incidentalSides": 0,
+    "baselineSuiteCovered": 0,
+    "functionsTotal": 11,
+    "functionsCovered": 0,
+    "functionsUncovered": 11,
+    "statementsTotal": 49,
+    "statementsCovered": 0,
+    "statementsUncovered": 49,
+    "baselineFunctionsCovered": 0,
+    "baselineStatementsCovered": 0,
+    "baselineSuiteTotal": 8,
+    "joinAgreesWithBaseline": true
+  },
+  "verified": [],
+  "falseClaims": [],
+  "unmeasurable": [],
+  "stillUncovered": [
+    {
+      "armId": "src/index.ts#75:binary-expr:0",
+      "file": "src/index.ts",
+      "line": 75,
+      "side": "Number(id)",
+      "kind": "binary-expr",
+      "functionName": "<arg1 of app.put>",
+      "functionId": "src/index.ts:63:<arg1 of app.put>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    },
+    {
+      "armId": "src/index.ts#75:binary-expr:0",
+      "file": "src/index.ts",
+      "line": 75,
+      "side": "undefined",
+      "kind": "binary-expr",
+      "functionName": "<arg1 of app.put>",
+      "functionId": "src/index.ts:63:<arg1 of app.put>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    },
+    {
+      "armId": "src/index.ts#139:binary-expr:0",
+      "file": "src/index.ts",
+      "line": 139,
+      "side": "Number(take)",
+      "kind": "binary-expr",
+      "functionName": "<arg1 of app.get>",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    },
+    {
+      "armId": "src/index.ts#139:binary-expr:0",
+      "file": "src/index.ts",
+      "line": 139,
+      "side": "undefined",
+      "kind": "binary-expr",
+      "functionName": "<arg1 of app.get>",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    },
+    {
+      "armId": "src/index.ts#140:binary-expr:0",
+      "file": "src/index.ts",
+      "line": 140,
+      "side": "Number(skip)",
+      "kind": "binary-expr",
+      "functionName": "<arg1 of app.get>",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    },
+    {
+      "armId": "src/index.ts#140:binary-expr:0",
+      "file": "src/index.ts",
+      "line": 140,
+      "side": "undefined",
+      "kind": "binary-expr",
+      "functionName": "<arg1 of app.get>",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    },
+    {
+      "armId": "src/index.ts#124:cond-expr:0",
+      "file": "src/index.ts",
+      "line": 124,
+      "side": "whenTrue",
+      "kind": "cond-expr",
+      "functionName": "<arg1 of app.get>",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    },
+    {
+      "armId": "src/index.ts#124:cond-expr:0",
+      "file": "src/index.ts",
+      "line": 124,
+      "side": "whenFalse",
+      "kind": "cond-expr",
+      "functionName": "<arg1 of app.get>",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "ruling": {
+        "state": "open",
+        "why": "no row covers it and no reason is written for it",
+        "saidBy": "coverage.mjs"
+      }
+    }
+  ],
+  "emptyStage3": true,
+  "failingTests": [],
+  "refused": null
+}

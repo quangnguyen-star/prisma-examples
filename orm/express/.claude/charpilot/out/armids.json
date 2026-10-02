@@ -1,0 +1,46 @@
+{
+  "stage": 2,
+  "scannedAt": "2026-10-02T04:40:49.033Z",
+  "totals": {
+    "arms": 17,
+    "distinctStableIds": 17
+  },
+  "byStableId": {
+    "src/index.ts#6043a1c2de:catch": "src/index.ts#58:catch:0",
+    "src/index.ts#ec6907c237:binary-expr": "src/index.ts#75:binary-expr:0",
+    "src/index.ts#86d7051bd4:catch": "src/index.ts#79:catch:0",
+    "src/index.ts#bb04c5e3b6:cond-expr": "src/index.ts#124:cond-expr:0",
+    "src/index.ts#d1a6f8bfdb:binary-expr": "src/index.ts#139:binary-expr:0",
+    "src/index.ts#11f8f4a5a4:binary-expr": "src/index.ts#140:binary-expr:0",
+    "src/index.ts#e6d822c35c:entry": "src/index.ts#13:entry:0",
+    "src/index.ts#c08c460e9a:entry": "src/index.ts#16:entry:0",
+    "src/index.ts#1fff9ee29d:entry": "src/index.ts#32:entry:0",
+    "src/index.ts#9f7a007f2a:entry": "src/index.ts#44:entry:0",
+    "src/index.ts#6e399ecf98:entry": "src/index.ts#63:entry:0",
+    "src/index.ts#c7726fbf16:entry": "src/index.ts#84:entry:0",
+    "src/index.ts#2b69dec817:entry": "src/index.ts#94:entry:0",
+    "src/index.ts#be4660c818:entry": "src/index.ts#99:entry:0",
+    "src/index.ts#12e4811a63:entry": "src/index.ts#112:entry:0",
+    "src/index.ts#0cff92db49:entry": "src/index.ts#121:entry:0",
+    "src/index.ts#9ca6274d76:entry": "src/index.ts#149:entry:0"
+  },
+  "byArmId": {
+    "src/index.ts#58:catch:0": "src/index.ts#6043a1c2de:catch",
+    "src/index.ts#75:binary-expr:0": "src/index.ts#ec6907c237:binary-expr",
+    "src/index.ts#79:catch:0": "src/index.ts#86d7051bd4:catch",
+    "src/index.ts#124:cond-expr:0": "src/index.ts#bb04c5e3b6:cond-expr",
+    "src/index.ts#139:binary-expr:0": "src/index.ts#d1a6f8bfdb:binary-expr",
+    "src/index.ts#140:binary-expr:0": "src/index.ts#11f8f4a5a4:binary-expr",
+    "src/index.ts#13:entry:0": "src/index.ts#e6d822c35c:entry",
+    "src/index.ts#16:entry:0": "src/index.ts#c08c460e9a:entry",
+    "src/index.ts#32:entry:0": "src/index.ts#1fff9ee29d:entry",
+    "src/index.ts#44:entry:0": "src/index.ts#9f7a007f2a:entry",
+    "src/index.ts#63:entry:0": "src/index.ts#6e399ecf98:entry",
+    "src/index.ts#84:entry:0": "src/index.ts#c7726fbf16:entry",
+    "src/index.ts#94:entry:0": "src/index.ts#2b69dec817:entry",
+    "src/index.ts#99:entry:0": "src/index.ts#be4660c818:entry",
+    "src/index.ts#112:entry:0": "src/index.ts#12e4811a63:entry",
+    "src/index.ts#121:entry:0": "src/index.ts#0cff92db49:entry",
+    "src/index.ts#149:entry:0": "src/index.ts#9ca6274d76:entry"
+  }
+}

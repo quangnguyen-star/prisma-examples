@@ -1,0 +1,29 @@
+{
+  "stage": 5,
+  "emittedAt": "2026-10-02T04:43:59.503Z",
+  "argv": [
+    "--emit-tests",
+    "test/characterization"
+  ],
+  "policy": "real-except-cache",
+  "output": ".claude/charpilot/out/behaviour.json",
+  "outputRecordedAt": "2026-10-02T04:43:52.449Z",
+  "rowTimeoutMs": 10000,
+  "rowTimeoutMsSource": "rows",
+  "rows": {
+    "wanted": 4,
+    "asserted": 4,
+    "unverified": 0
+  },
+  "tests": 4,
+  "files": 1,
+  "emittedFiles": [
+    "test/characterization/index.char.test.ts"
+  ],
+  "emittedFileHashes": {
+    "test/characterization/index.char.test.ts": "f5c154333af274e823b2d0f2892497dc11fddc62d6098e6c6df510674641f17d"
+  },
+  "unresolvableSpecifiers": [],
+  "leftAlone": [],
+  "reproduce": "node .claude/charpilot/record.mjs --policy real-except-cache --emit-tests test/characterization"
+}

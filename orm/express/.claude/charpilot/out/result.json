@@ -1,0 +1,66 @@
+{
+  "status": "succeeded",
+  "pr_url": null,
+  "coverage_percentage": {
+    "branches": 100,
+    "functions": 18.2
+  },
+  "coverage_percentage_live_code": {
+    "branches": 100,
+    "sides": "8/8",
+    "dead_export_sides_removed": 0,
+    "dead_export_sides_removed_that_were_covered": 0
+  },
+  "mode": "mocked",
+  "stretch": 97.5,
+  "env_stand_ins": [],
+  "target": 96.5,
+  "target_met": true,
+  "rulings": {
+    "unreachable": 0,
+    "pipeline_defect": 0,
+    "open": 0
+  },
+  "claims": {
+    "checked": 8,
+    "verified": 8,
+    "false": 0,
+    "unmeasurable": 0
+  },
+  "missing": [],
+  "notes": [
+    {
+      "step": "stagingenv",
+      "id": "stagingenv:iac-not-found:prisma-rest-express",
+      "tool": "stagingenv.mjs",
+      "message": "no qode-iac checkout, and the run is mocked by request (CHARPILOT_MODE=mocked or CHARPILOT_EXPECTED_DB=none): no deployed environment was resolved, the service boots on schema stand-ins, and every boundary is answered by a double"
+    },
+    {
+      "step": "baseline",
+      "id": "baseline:runner:none:bootstrap",
+      "tool": "runner.mjs",
+      "message": "no runnable test suite (no test script, runner or test files); vitest was set up for the characterization suite (F1.7)"
+    }
+  ],
+  "runner": {
+    "runner": "none",
+    "detail": "no test script, runner or test files",
+    "action": "bootstrap",
+    "measuredByStage1": false,
+    "evidence": [
+      "0 test file(s)"
+    ],
+    "note": "no runnable test suite (no test script, runner or test files); vitest was set up for the characterization suite (F1.7)"
+  },
+  "defects_digest": "fe74feacaf131a61b77fb02310acdba0216fc6b2",
+  "checkpoint": {
+    "host_checkpoint_unavailable_since": null,
+    "remote_checkpoint_stale_since": null,
+    "last_checkpoint": {
+      "label": "the last round",
+      "round": null,
+      "host": true,
+      "remote": true
+    }
+  }
+}

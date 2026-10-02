@@ -1,0 +1,26 @@
+{
+  "defects": [
+    {
+      "step": "stagingenv",
+      "kind": "note",
+      "tool": "stagingenv.mjs",
+      "exit": null,
+      "message": "no qode-iac checkout, and the run is mocked by request (CHARPILOT_MODE=mocked or CHARPILOT_EXPECTED_DB=none): no deployed environment was resolved, the service boots on schema stand-ins, and every boundary is answered by a double",
+      "sides": [],
+      "id": "stagingenv:iac-not-found:prisma-rest-express",
+      "run": "20261002T043917Z",
+      "at": "2026-10-02T04:43:41.504Z"
+    },
+    {
+      "step": "baseline",
+      "kind": "note",
+      "tool": "runner.mjs",
+      "exit": null,
+      "message": "no runnable test suite (no test script, runner or test files); vitest was set up for the characterization suite (F1.7)",
+      "sides": [],
+      "id": "baseline:runner:none:bootstrap",
+      "run": "20261002T043917Z",
+      "at": "2026-10-02T04:43:41.541Z"
+    }
+  ]
+}

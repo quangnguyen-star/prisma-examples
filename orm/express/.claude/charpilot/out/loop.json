@@ -1,0 +1,51 @@
+{
+  "stage": "6-loop",
+  "mode": "mocked",
+  "iterations": [
+    {
+      "n": 1,
+      "at": "2026-10-02T04:41:29.526Z",
+      "gitSha": "caa902a819be2e8fe1e0b0ec2f543e9220cf69cc",
+      "specs": "test/characterization",
+      "specsMeasured": 0,
+      "sides": 8,
+      "hitByCharacterization": 0,
+      "hitByEither": 0,
+      "stillUncovered": 8,
+      "correctedHitByEither": 0,
+      "correctedSides": 8,
+      "newSides": null,
+      "claimsFalse": 0
+    },
+    {
+      "n": 2,
+      "at": "2026-10-02T04:43:42.745Z",
+      "gitSha": "caa902a819be2e8fe1e0b0ec2f543e9220cf69cc",
+      "specs": "test/characterization",
+      "specsMeasured": 0,
+      "sides": 8,
+      "hitByCharacterization": 0,
+      "hitByEither": 0,
+      "stillUncovered": 8,
+      "correctedHitByEither": 0,
+      "correctedSides": 8,
+      "newSides": 0,
+      "claimsFalse": 0
+    },
+    {
+      "n": 3,
+      "at": "2026-10-02T04:44:06.848Z",
+      "gitSha": "caa902a819be2e8fe1e0b0ec2f543e9220cf69cc",
+      "specs": "test/characterization",
+      "specsMeasured": 1,
+      "sides": 8,
+      "hitByCharacterization": 8,
+      "hitByEither": 8,
+      "stillUncovered": 0,
+      "correctedHitByEither": 8,
+      "correctedSides": 8,
+      "newSides": 8,
+      "claimsFalse": 0
+    }
+  ]
+}

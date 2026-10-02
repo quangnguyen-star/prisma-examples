@@ -1,0 +1,108 @@
+{
+  "recordingKey": "07cf43c42c53",
+  "rows": {
+    "arg1-of-app-get-124-cond-expr-1": {
+      "id": "arg1-of-app-get-124-cond-expr-1",
+      "file": "answers-1f515d7f094f.json",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "covers": [
+        "src/index.ts#124:cond-expr:0",
+        "src/index.ts#139:binary-expr:0",
+        "src/index.ts#140:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#124:cond-expr:0": [
+          "whenFalse"
+        ],
+        "src/index.ts#139:binary-expr:0": [
+          "undefined"
+        ],
+        "src/index.ts#140:binary-expr:0": [
+          "undefined"
+        ]
+      },
+      "source": "recorded",
+      "clockEpoch": 1790916208039,
+      "invoked": true,
+      "returned": {
+        "$undefined": true
+      },
+      "durationMs": 834,
+      "rowTimeoutMs": 10000,
+      "console": [],
+      "boundaryCalls": [],
+      "movedBranches": {
+        "src/index.ts": {
+          "1": [
+            1
+          ],
+          "2": [
+            0,
+            1
+          ],
+          "3": [
+            0,
+            1
+          ]
+        }
+      },
+      "movedBranchesBeforeSubject": {},
+      "subjectCallStarted": true,
+      "armsMoved": [
+        {
+          "armId": "src/index.ts#124:cond-expr:0",
+          "file": "src/index.ts",
+          "line": 124,
+          "sides": [
+            "whenFalse"
+          ]
+        },
+        {
+          "armId": "src/index.ts#139:binary-expr:0",
+          "file": "src/index.ts",
+          "line": 139,
+          "sides": [
+            "Number(take)",
+            "undefined"
+          ]
+        },
+        {
+          "armId": "src/index.ts#140:binary-expr:0",
+          "file": "src/index.ts",
+          "line": 140,
+          "sides": [
+            "Number(skip)",
+            "undefined"
+          ]
+        }
+      ],
+      "claimVerdicts": [
+        {
+          "armId": "src/index.ts#124:cond-expr:0",
+          "side": "whenFalse",
+          "verdict": "verified"
+        },
+        {
+          "armId": "src/index.ts#139:binary-expr:0",
+          "side": "undefined",
+          "verdict": "verified"
+        },
+        {
+          "armId": "src/index.ts#140:binary-expr:0",
+          "side": "undefined",
+          "verdict": "verified"
+        }
+      ],
+      "__fingerprint": "8a4b8d9841da",
+      "__recordedNode": 22,
+      "__recordedBy": "1904df10763c",
+      "__recording": "1497-093b1c",
+      "__sources": {
+        "roots": [
+          "src/index.ts"
+        ],
+        "digest": "a337e101a2a6"
+      }
+    }
+  }
+}

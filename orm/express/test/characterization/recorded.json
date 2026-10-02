@@ -1,0 +1,165 @@
+{
+  "stage": 5,
+  "writtenAt": "2026-10-02T04:43:59.530Z",
+  "recordedAgainst": {
+    "gitSha": "caa902a819be2e8fe1e0b0ec2f543e9220cf69cc",
+    "gitBranch": "characterize/caa902a81-20261002T043917Z",
+    "gitDirty": true
+  },
+  "harness": "1904df10763c",
+  "emitter": "59127df68e23",
+  "rows": [
+    {
+      "id": "arg1-of-app-get-124-cond-expr-0",
+      "file": "answers-1f515d7f094f.json",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "armIds": [
+        "src/index.ts#124:cond-expr:0",
+        "src/index.ts#139:binary-expr:0",
+        "src/index.ts#140:binary-expr:0"
+      ],
+      "stableIds": [
+        "src/index.ts#bb04c5e3b6:cond-expr",
+        "src/index.ts#d1a6f8bfdb:binary-expr",
+        "src/index.ts#11f8f4a5a4:binary-expr"
+      ],
+      "reaches": {
+        "src/index.ts#124:cond-expr:0": [
+          "whenTrue"
+        ],
+        "src/index.ts#139:binary-expr:0": [
+          "Number(take)"
+        ],
+        "src/index.ts#140:binary-expr:0": [
+          "Number(skip)"
+        ]
+      },
+      "args": [
+        {
+          "build": "doubles.expressRequest({ query: { searchString: \"x\", take: \"5\", skip: \"2\", orderBy: \"asc\" } })"
+        },
+        {
+          "build": "doubles.expressResponse()"
+        }
+      ],
+      "ctorArgs": [],
+      "invokeReturned": null,
+      "outcome": {
+        "returned": {
+          "$undefined": true
+        }
+      },
+      "boundaryCalls": [],
+      "observation": "bb99c3ea1d41"
+    },
+    {
+      "id": "arg1-of-app-get-124-cond-expr-1",
+      "file": "answers-1f515d7f094f.json",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "armIds": [
+        "src/index.ts#124:cond-expr:0",
+        "src/index.ts#139:binary-expr:0",
+        "src/index.ts#140:binary-expr:0"
+      ],
+      "stableIds": [
+        "src/index.ts#bb04c5e3b6:cond-expr",
+        "src/index.ts#d1a6f8bfdb:binary-expr",
+        "src/index.ts#11f8f4a5a4:binary-expr"
+      ],
+      "reaches": {
+        "src/index.ts#124:cond-expr:0": [
+          "whenFalse"
+        ],
+        "src/index.ts#139:binary-expr:0": [
+          "undefined"
+        ],
+        "src/index.ts#140:binary-expr:0": [
+          "undefined"
+        ]
+      },
+      "args": [
+        {
+          "build": "doubles.expressRequest({ query: {} })"
+        },
+        {
+          "build": "doubles.expressResponse()"
+        }
+      ],
+      "ctorArgs": [],
+      "invokeReturned": null,
+      "outcome": {
+        "returned": {
+          "$undefined": true
+        }
+      },
+      "boundaryCalls": [],
+      "observation": "9054c4301511"
+    },
+    {
+      "id": "arg1-of-app-put-75-binary-expr-0",
+      "file": "answers-d03bc4a89a12.json",
+      "functionId": "src/index.ts:63:<arg1 of app.put>",
+      "armIds": [
+        "src/index.ts#75:binary-expr:0"
+      ],
+      "stableIds": [
+        "src/index.ts#ec6907c237:binary-expr"
+      ],
+      "reaches": {
+        "src/index.ts#75:binary-expr:0": [
+          "Number(id)"
+        ]
+      },
+      "args": [
+        {
+          "build": "doubles.expressRequest({ params: { id: \"1\" } })"
+        },
+        {
+          "build": "doubles.expressResponse()"
+        }
+      ],
+      "ctorArgs": [],
+      "invokeReturned": null,
+      "outcome": {
+        "returned": {
+          "$undefined": true
+        }
+      },
+      "boundaryCalls": [],
+      "observation": "36512c26fc1c"
+    },
+    {
+      "id": "arg1-of-app-put-75-binary-expr-1",
+      "file": "answers-d03bc4a89a12.json",
+      "functionId": "src/index.ts:63:<arg1 of app.put>",
+      "armIds": [
+        "src/index.ts#75:binary-expr:0"
+      ],
+      "stableIds": [
+        "src/index.ts#ec6907c237:binary-expr"
+      ],
+      "reaches": {
+        "src/index.ts#75:binary-expr:0": [
+          "undefined"
+        ]
+      },
+      "args": [
+        {
+          "build": "doubles.expressRequest({ params: { id: \"abc\" } })"
+        },
+        {
+          "build": "doubles.expressResponse()"
+        }
+      ],
+      "ctorArgs": [],
+      "invokeReturned": null,
+      "outcome": {
+        "returned": {
+          "$undefined": true
+        }
+      },
+      "boundaryCalls": [],
+      "observation": "7f7a8030a74e"
+    }
+  ]
+}

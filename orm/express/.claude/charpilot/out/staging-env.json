@@ -1,0 +1,30 @@
+{
+  "stage": "1-staging-env",
+  "state": "iac-not-found",
+  "resolvedAt": "2026-10-02T04:40:45.365Z",
+  "namespace": "staging",
+  "serviceName": "prisma-rest-express",
+  "findings": [
+    "no qode-iac checkout with a manifests/ directory beside the target - the deployed environment cannot be resolved, so stage 4 would run against whatever the shell happens to hold. Pass --iac <path> or set CHARPILOT_IAC"
+  ],
+  "vars": {},
+  "sources": [],
+  "unverified": [],
+  "scopes": {},
+  "standIns": {
+    "mode": "mocked",
+    "names": [],
+    "neededBy": {},
+    "notStoodIn": {
+      "supplied": [],
+      "defaulted": [],
+      "database": [
+        "DATABASE_URL"
+      ],
+      "runtime": [],
+      "flag": [],
+      "everyReadDefaults": [],
+      "notReadInSource": []
+    }
+  }
+}

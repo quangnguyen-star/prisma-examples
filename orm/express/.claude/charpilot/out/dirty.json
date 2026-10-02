@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "walk": "1790916221471-1584-1",
+  "rows": {
+    "changed": [
+      "arg1-of-app-get-124-cond-expr-0",
+      "arg1-of-app-get-124-cond-expr-1",
+      "arg1-of-app-put-75-binary-expr-0",
+      "arg1-of-app-put-75-binary-expr-1"
+    ],
+    "removed": [],
+    "source": "steps/record.mjs, from behaviour.json before and after the recorder"
+  },
+  "at": "2026-10-02T04:43:59.562Z",
+  "specs": {
+    "from": null,
+    "to": "ba8178ef5e6f050ef4227e26a849d5b98e3c198f7dd148e2731e8fcfe3d6457b",
+    "changed": [],
+    "added": [
+      "test/characterization/index.char.test.ts"
+    ],
+    "removed": [],
+    "unchanged": 0
+  }
+}

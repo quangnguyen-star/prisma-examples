@@ -1,0 +1,64 @@
+{
+  "recordingKey": "07cf43c42c53",
+  "rows": {
+    "arg1-of-app-put-75-binary-expr-0": {
+      "id": "arg1-of-app-put-75-binary-expr-0",
+      "file": "answers-d03bc4a89a12.json",
+      "functionId": "src/index.ts:63:<arg1 of app.put>",
+      "covers": [
+        "src/index.ts#75:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#75:binary-expr:0": [
+          "Number(id)"
+        ]
+      },
+      "source": "recorded",
+      "clockEpoch": 1790916197992,
+      "invoked": true,
+      "returned": {
+        "$undefined": true
+      },
+      "durationMs": 875,
+      "rowTimeoutMs": 10000,
+      "console": [],
+      "boundaryCalls": [],
+      "movedBranches": {
+        "src/index.ts": {
+          "0": [
+            0
+          ]
+        }
+      },
+      "movedBranchesBeforeSubject": {},
+      "subjectCallStarted": true,
+      "armsMoved": [
+        {
+          "armId": "src/index.ts#75:binary-expr:0",
+          "file": "src/index.ts",
+          "line": 75,
+          "sides": [
+            "Number(id)"
+          ]
+        }
+      ],
+      "claimVerdicts": [
+        {
+          "armId": "src/index.ts#75:binary-expr:0",
+          "side": "Number(id)",
+          "verdict": "verified"
+        }
+      ],
+      "__fingerprint": "0b13518bf0b5",
+      "__recordedNode": 22,
+      "__recordedBy": "1904df10763c",
+      "__recording": "1304-45c471",
+      "__sources": {
+        "roots": [
+          "src/index.ts"
+        ],
+        "digest": "a337e101a2a6"
+      }
+    }
+  }
+}

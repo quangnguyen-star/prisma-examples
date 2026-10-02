@@ -1,0 +1,4 @@
+{
+  "state": "no-recording",
+  "reason": "no recording at test/characterization/recorded.json - nothing from a previous run to reuse.\n  This file is written by `record.mjs --emit-tests`. A corpus committed before it existed does not carry one,\n  and a run against such a branch has to derive every side from nothing."
+}

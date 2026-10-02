@@ -1,0 +1,43 @@
+{
+  "stage": "5-cigate",
+  "ranAt": "2026-10-02T04:44:02.444Z",
+  "tests": {
+    "command": "vitest run test/characterization (the repo's own config)",
+    "files": 1,
+    "failed": 0
+  },
+  "typecheck": {
+    "skipped": "the repo declares no typecheck script"
+  },
+  "withheld": [],
+  "pipelineDefects": [],
+  "measurements": [],
+  "notes": [],
+  "targetNode": {
+    "node": "/opt/node/22/bin/node",
+    "major": 22,
+    "source": "CHARPILOT_TARGET_NODE",
+    "available": true,
+    "why": null
+  },
+  "scope": "full",
+  "scopeWhy": "the walk asked for a full gate",
+  "gatedFiles": [],
+  "ledger": {
+    "manifest": "ba8178ef5e6f050ef4227e26a849d5b98e3c198f7dd148e2731e8fcfe3d6457b",
+    "specs": {
+      "test/characterization/index.char.test.ts": "f5c154333af274e823b2d0f2892497dc11fddc62d6098e6c6df510674641f17d"
+    },
+    "context": "90c68e3c82b614237850fb7348277bf175eefdfb29d942aef0038194c0271992",
+    "green": true,
+    "scope": "full",
+    "why": "the walk asked for a full gate",
+    "files": [],
+    "at": "2026-10-02T04:44:02.445Z",
+    "fullAt": "2026-10-02T04:44:02.445Z",
+    "partialsSinceFull": 0,
+    "fullManifest": "ba8178ef5e6f050ef4227e26a849d5b98e3c198f7dd148e2731e8fcfe3d6457b",
+    "fullContext": "90c68e3c82b614237850fb7348277bf175eefdfb29d942aef0038194c0271992",
+    "fullGreen": true
+  }
+}
