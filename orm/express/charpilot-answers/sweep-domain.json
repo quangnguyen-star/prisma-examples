@@ -1,0 +1,6 @@
+{"domain":[
+{"name":"res","type":"import(\"express-serve-static-core\").Response<any, Record<string, any>, number>","values":[{},null,{"statusCode":200},{"locals":{}}]},
+{"name":"req","type":"import(\"express-serve-static-core\").Request<{ id: string; }, any, any, import(\"qs\").ParsedQs, Record<string, any>>","values":[{"params":{"id":"1"},"body":{},"query":{}},{"params":{"id":"abc"},"body":{"title":"t","content":"c","published":true},"query":{}},{"params":{"id":""},"body":null,"query":{}},{"params":{"id":"999999"},"body":{"published":false},"query":{}},null]},
+{"name":"req","type":"import(\"express-serve-static-core\").Request<{}, any, any, import(\"qs\").ParsedQs, Record<string, any>>","values":[{"body":{},"query":{},"params":{}},{"body":{"name":"a","email":"a@b.c","posts":[{"title":"t","content":"c"}]},"query":{}},{"body":{"title":"t","content":"c","authorEmail":"a@b.c"},"query":{"searchString":"x","skip":"1","take":"1","orderBy":"asc"}},{"body":null,"query":{"searchString":""}},{"body":{"email":""},"query":{"skip":"-1","take":"0"}},null]},
+{"name":"post","type":"Prisma.PostCreateInput","values":[{"title":"t","content":"c"},{"title":"","content":null},{},null,"__undefined__"]}
+]}

@@ -1,0 +1,811 @@
+{
+  "stage": "4-behaviour",
+  "mode": "mocked",
+  "recordedAt": "2026-10-02T04:41:28.298Z",
+  "harnessVersion": "1904df10763c",
+  "recordingKey": "07cf43c42c53",
+  "recordingKeyParts": {
+    "targetNodeMajor": 22,
+    "observationVersion": 2,
+    "rowTimeoutMs": 10000,
+    "allowHosts": [],
+    "live": false,
+    "liveProviders": false,
+    "policy": "real-except-cache",
+    "envProvenance": "process-env-only",
+    "standIns": []
+  },
+  "selection": {
+    "argv": [
+      "--fresh"
+    ],
+    "only": null,
+    "live": false,
+    "liveProviders": false,
+    "policy": "real-except-cache",
+    "rowTimeoutMs": 10000,
+    "proposalsSeen": 144,
+    "runnableSelected": 0
+  },
+  "envFile": "process env only",
+  "envProvenance": "process-env-only",
+  "standIns": [],
+  "harnessEnv": {
+    "REDIS_ENABLED": "true",
+    "REDIS_PASSWORD": "",
+    "BUILD_ID": "charpilot"
+  },
+  "target": "express",
+  "dbGuard": {
+    "denied": [
+      "@/prisma/client"
+    ],
+    "relativeUnreachable": [
+      "../prisma/generated/client"
+    ],
+    "ormModulesSeen": [
+      "../prisma/generated/client"
+    ]
+  },
+  "totals": {
+    "proposals": 144,
+    "runnable": 0,
+    "recorded": 0,
+    "harnessFailures": 0,
+    "blockedEgress": 0,
+    "notSettled": 0,
+    "notSettledBeforeSubject": 0,
+    "rowTimeoutMs": 10000,
+    "egressAfterSettle": 0,
+    "pending": 0,
+    "unrunnable": 144,
+    "notRecorded": 144,
+    "claimsChecked": 0,
+    "claimsJudgeable": 0,
+    "claimsVerified": 0,
+    "claimsFalse": 0,
+    "claimsUnmeasurable": 0,
+    "supersededRows": 0
+  },
+  "rows": [],
+  "skipped": [
+    {
+      "id": "sweep-src-index-ts-13-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-13-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-13-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-14-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-14-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-14-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-16-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-16-entry-0-2",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-16-entry-0-4",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-17-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-17-stmt-0-2",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-17-stmt-0-4",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-20-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-20-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-20-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-29-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-29-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-29-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-32-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-32-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-32-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-33-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-33-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-33-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-34-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-34-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-34-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-41-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-41-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-41-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-44-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-44-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-44-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-45-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-45-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-45-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-47-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-47-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-47-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-48-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-48-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-48-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-57-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-57-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-57-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-58-catch-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-58-catch-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-58-catch-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-59-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-59-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-59-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-63-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-63-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-63-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-64-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-64-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-64-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-66-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-66-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-66-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-67-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-67-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-67-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-74-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-74-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-74-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-75-binary-expr-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-75-binary-expr-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-75-binary-expr-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-78-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-78-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-78-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-79-catch-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-79-catch-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-79-catch-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-80-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-80-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-80-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-84-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-84-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-84-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-85-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-85-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-85-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-86-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-86-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-86-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-91-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-91-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-91-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-94-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-94-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-94-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-95-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-95-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-95-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-96-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-96-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-96-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-99-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-99-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-99-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-100-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-100-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-100-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-102-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-102-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-102-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-109-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-109-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-109-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-112-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-112-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-112-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-113-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-113-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-113-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-115-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-115-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-115-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-118-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-118-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-118-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-121-entry-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-121-entry-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-121-entry-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-122-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-122-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-122-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-124-cond-expr-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-124-cond-expr-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-124-cond-expr-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-133-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-133-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-133-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-139-binary-expr-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-139-binary-expr-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-139-binary-expr-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-140-binary-expr-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-140-binary-expr-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-140-binary-expr-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-146-stmt-0-0",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-146-stmt-0-7",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    },
+    {
+      "id": "sweep-src-index-ts-146-stmt-0-14",
+      "file": "sweep-candidates.json",
+      "reason": "trigger:http-request - a framework fires this, and the proposal supplies no invoke of its own"
+    }
+  ],
+  "shadowed": [],
+  "rekeyed": [],
+  "droppedAnswers": [],
+  "falseClaimsAtRecordTime": [],
+  "unmeasurableClaimsAtRecordTime": [],
+  "reuse": {
+    "rows": 0,
+    "recordedThisRun": 0,
+    "takenFromArtifact": 0,
+    "recordedAgainBecause": {},
+    "why": {}
+  },
+  "environment": {
+    "causes": [],
+    "defect": null
+  },
+  "recordingComplete": true,
+  "overwrite": null
+}

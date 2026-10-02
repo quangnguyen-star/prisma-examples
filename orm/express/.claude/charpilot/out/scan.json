@@ -1,0 +1,635 @@
+{
+  "stage": "2-scan",
+  "generatedAt": "2026-10-02T04:40:49.013Z",
+  "gitSha": "caa902a819be2e8fe1e0b0ec2f543e9220cf69cc",
+  "scanTool": {
+    "file": "scan.mjs",
+    "sha256": "9b782da52f533b5bec303fcd6d476debb993652f48d87bd77652df5963fc245b"
+  },
+  "srcRoot": "src",
+  "totals": {
+    "files": 1,
+    "functions": 11,
+    "withOwnEntry": 0,
+    "withoutOwnEntry": 11,
+    "pctWithOwnEntry": 0,
+    "armsIstanbul": 8,
+    "armsAst": 10,
+    "armsBehindOwnEntry": 0,
+    "armsAtModuleScope": 0
+  },
+  "moduleScopeArms": [],
+  "perFileFunctions": {
+    "src/index.ts": 11
+  },
+  "perFileFunctionLines": {
+    "src/index.ts": {
+      "13": 1,
+      "16": 1,
+      "32": 1,
+      "44": 1,
+      "63": 1,
+      "84": 1,
+      "94": 1,
+      "99": 1,
+      "112": 1,
+      "121": 1,
+      "149": 1
+    }
+  },
+  "perFileArms": {
+    "src/index.ts": 8
+  },
+  "byEntryKind": {
+    "call-argument": 10,
+    "nested": 1
+  },
+  "reconcile": {
+    "arms": {
+      "available": true,
+      "astTotal": 8,
+      "istanbulTotal": 8,
+      "delta": 0,
+      "matchPct": 100,
+      "filesWithDrift": []
+    },
+    "functions": {
+      "available": true,
+      "astTotal": 11,
+      "istanbulTotal": 11,
+      "delta": 0,
+      "matchPct": 100,
+      "filesWithDrift": []
+    }
+  },
+  "functions": [
+    {
+      "id": "src/index.ts:13:<arg1 of app.post>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 13,
+      "istanbulLine": 13,
+      "istanbulFn": true,
+      "endLine": 30,
+      "name": "<arg1 of app.post>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{}, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.post",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#13:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request through app.post"
+      }
+    },
+    {
+      "id": "src/index.ts:16:<arg0 of posts?.map>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 16,
+      "istanbulLine": 16,
+      "istanbulFn": true,
+      "endLine": 18,
+      "name": "<arg0 of posts?.map>",
+      "kind": "ArrowFunction",
+      "async": false,
+      "params": [
+        {
+          "name": "post",
+          "type": "Prisma.PostCreateInput",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "nested",
+        "reachable": false,
+        "reason": "declared inside another function — reach it through its enclosing call",
+        "enclosedBy": "<arg1 of app.post>"
+      },
+      "entryArmId": "src/index.ts#16:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request through app.post",
+        "note": "trigger — reached via src/index.ts:13:<arg1 of app.post>"
+      }
+    },
+    {
+      "id": "src/index.ts:32:<arg1 of app.post>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 32,
+      "istanbulLine": 32,
+      "istanbulFn": true,
+      "endLine": 42,
+      "name": "<arg1 of app.post>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{}, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.post",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#32:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request through app.post"
+      }
+    },
+    {
+      "id": "src/index.ts:44:<arg1 of app.put>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 44,
+      "istanbulLine": 44,
+      "istanbulFn": true,
+      "endLine": 61,
+      "name": "<arg1 of app.put>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{ id: string; }, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.put",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#44:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 1,
+        "list": [
+          {
+            "armId": "src/index.ts#58:catch:0",
+            "stableId": "src/index.ts#6043a1c2de:catch",
+            "kind": "catch",
+            "count": 1,
+            "istanbul": false,
+            "line": 58,
+            "column": 4,
+            "labels": [
+              "throws"
+            ],
+            "text": "catch (error) { res.json({ error: `Post with ID ${id} does not exist in the database` }) }"
+          }
+        ]
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request matching PUT /post/:id/views"
+      }
+    },
+    {
+      "id": "src/index.ts:63:<arg1 of app.put>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 63,
+      "istanbulLine": 63,
+      "istanbulFn": true,
+      "endLine": 82,
+      "name": "<arg1 of app.put>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{ id: string; }, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.put",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#63:entry:0",
+      "arms": {
+        "istanbul": 2,
+        "ast": 3,
+        "list": [
+          {
+            "armId": "src/index.ts#75:binary-expr:0",
+            "stableId": "src/index.ts#ec6907c237:binary-expr",
+            "kind": "binary-expr",
+            "count": 2,
+            "istanbul": true,
+            "line": 75,
+            "column": 19,
+            "labels": [
+              "Number(id)",
+              "undefined"
+            ],
+            "text": "Number(id) || undefined"
+          },
+          {
+            "armId": "src/index.ts#79:catch:0",
+            "stableId": "src/index.ts#86d7051bd4:catch",
+            "kind": "catch",
+            "count": 1,
+            "istanbul": false,
+            "line": 79,
+            "column": 4,
+            "labels": [
+              "throws"
+            ],
+            "text": "catch (error) { res.json({ error: `Post with ID ${id} does not exist in the database` }) }"
+          }
+        ]
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request matching PUT /publish/:id"
+      }
+    },
+    {
+      "id": "src/index.ts:84:<arg1 of app.delete>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 84,
+      "istanbulLine": 84,
+      "istanbulFn": true,
+      "endLine": 92,
+      "name": "<arg1 of app.delete>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{ id: string; }, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.delete",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#84:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request through app.delete"
+      }
+    },
+    {
+      "id": "src/index.ts:94:<arg1 of app.get>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 94,
+      "istanbulLine": 94,
+      "istanbulFn": true,
+      "endLine": 97,
+      "name": "<arg1 of app.get>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{}, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.get",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#94:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request matching GET /users"
+      }
+    },
+    {
+      "id": "src/index.ts:99:<arg1 of app.get>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 99,
+      "istanbulLine": 99,
+      "istanbulFn": true,
+      "endLine": 110,
+      "name": "<arg1 of app.get>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{ id: string; }, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.get",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#99:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request matching GET /user/:id/drafts"
+      }
+    },
+    {
+      "id": "src/index.ts:112:<arg1 of app.get>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 112,
+      "istanbulLine": 112,
+      "istanbulFn": true,
+      "endLine": 119,
+      "name": "<arg1 of app.get>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{ id: string; }, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.get",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#112:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request through app.get"
+      }
+    },
+    {
+      "id": "src/index.ts:121:<arg1 of app.get>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 121,
+      "istanbulLine": 121,
+      "istanbulFn": true,
+      "endLine": 147,
+      "name": "<arg1 of app.get>",
+      "kind": "ArrowFunction",
+      "async": true,
+      "params": [
+        {
+          "name": "req",
+          "type": "import(\"express-serve-static-core\").Request<{}, any, any, import(\"qs\").ParsedQs, Record<string, any>>",
+          "optional": false,
+          "rest": false
+        },
+        {
+          "name": "res",
+          "type": "import(\"express-serve-static-core\").Response<any, Record<string, any>, number>",
+          "optional": false,
+          "rest": false
+        }
+      ],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.get",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#121:entry:0",
+      "arms": {
+        "istanbul": 6,
+        "ast": 6,
+        "list": [
+          {
+            "armId": "src/index.ts#124:cond-expr:0",
+            "stableId": "src/index.ts#bb04c5e3b6:cond-expr",
+            "kind": "cond-expr",
+            "count": 2,
+            "istanbul": true,
+            "line": 124,
+            "column": 36,
+            "labels": [
+              "whenTrue",
+              "whenFalse"
+            ],
+            "text": "searchString ? { OR: [ { title: { contains: searchString as string } }, { content: { contains: searchString as string } }, ], } : {}"
+          },
+          {
+            "armId": "src/index.ts#139:binary-expr:0",
+            "stableId": "src/index.ts#d1a6f8bfdb:binary-expr",
+            "kind": "binary-expr",
+            "count": 2,
+            "istanbul": true,
+            "line": 139,
+            "column": 10,
+            "labels": [
+              "Number(take)",
+              "undefined"
+            ],
+            "text": "Number(take) || undefined"
+          },
+          {
+            "armId": "src/index.ts#140:binary-expr:0",
+            "stableId": "src/index.ts#11f8f4a5a4:binary-expr",
+            "kind": "binary-expr",
+            "count": 2,
+            "istanbul": true,
+            "line": 140,
+            "column": 10,
+            "labels": [
+              "Number(skip)",
+              "undefined"
+            ],
+            "text": "Number(skip) || undefined"
+          }
+        ]
+      },
+      "boundaries": [
+        {
+          "symbol": "Prisma",
+          "module": "../prisma/generated/client",
+          "imported": "Prisma",
+          "typeOnly": true
+        }
+      ],
+      "via": {
+        "kind": "trigger",
+        "trigger": "http-request",
+        "how": "an HTTP request matching GET /feed"
+      }
+    },
+    {
+      "id": "src/index.ts:149:<arg1 of app.listen>",
+      "file": "src/index.ts",
+      "typeOnly": false,
+      "line": 149,
+      "istanbulLine": 149,
+      "istanbulFn": true,
+      "endLine": 152,
+      "name": "<arg1 of app.listen>",
+      "kind": "ArrowFunction",
+      "async": false,
+      "params": [],
+      "entry": {
+        "kind": "call-argument",
+        "reachable": false,
+        "reason": "passed as an argument at module scope — it runs when the surrounding call runs",
+        "calledBy": "app.listen",
+        "module": "src/index.ts"
+      },
+      "entryArmId": "src/index.ts#149:entry:0",
+      "arms": {
+        "istanbul": 0,
+        "ast": 0,
+        "list": []
+      },
+      "boundaries": [],
+      "via": {
+        "kind": "trigger",
+        "trigger": "callback-argument",
+        "how": "invoked by app.listen when it runs"
+      }
+    }
+  ]
+}

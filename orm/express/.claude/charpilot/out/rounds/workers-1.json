@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "workers": [
+    {
+      "call": "toolu_01Pc11JMtbeyykhpxzQ5Mqox",
+      "packets": [
+        "packet-01.json"
+      ],
+      "launched_s": 0.0,
+      "back_s": 22.4,
+      "returned": true,
+      "cut_off": false,
+      "refused": false,
+      "failed": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+ "version": 1,
+ "walks": [
+  {
+   "run": "20261002T043917Z",
+   "round": 1,
+   "kind": "round",
+   "seconds": 13.1,
+   "gate": null,
+   "recorded": null,
+   "rows": null,
+   "exit": 75,
+   "at": "2026-10-02T04:40:52Z"
+  },
+  {
+   "run": "20261002T043917Z",
+   "round": 2,
+   "kind": "round",
+   "seconds": 4.7,
+   "gate": "full",
+   "recorded": null,
+   "rows": null,
+   "exit": 75,
+   "at": "2026-10-02T04:41:31Z"
+  }
+ ]
+}

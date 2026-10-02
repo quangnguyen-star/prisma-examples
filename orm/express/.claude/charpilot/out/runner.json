@@ -1,0 +1,12 @@
+{
+  "stage": "0-runner",
+  "runner": "none",
+  "detail": "no test script, runner or test files",
+  "action": "bootstrap",
+  "evidence": [
+    "0 test file(s)"
+  ],
+  "testFiles": 0,
+  "measuredByStage1": false,
+  "note": "no runnable test suite (no test script, runner or test files); vitest was set up for the characterization suite (F1.7)"
+}

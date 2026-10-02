@@ -1,0 +1,123 @@
+{
+  "stage": "4-preflight",
+  "checkedAt": "2026-10-02T04:41:27.242Z",
+  "probeList": {
+    "from": "the allowlist record.mjs enforces (handoff.mjs enforcedAllowlist), plus the env-derived addresses that carry a port",
+    "sources": {
+      "record.mjs": true,
+      "out/staging-env.json": true,
+      "out/baseline.json": true
+    },
+    "allowlistHosts": [
+      "127.0.0.1",
+      "::1",
+      "aiplatform.googleapis.com",
+      "api.anthropic.com",
+      "api.openai.com",
+      "cloud.langfuse.com",
+      "github.com",
+      "langfuse.qode.world",
+      "localhost",
+      "oauth2.googleapis.com"
+    ],
+    "allowlistRefusal": null
+  },
+  "rows": [
+    {
+      "name": "redis",
+      "host": "localhost",
+      "port": 6379,
+      "source": "env.ts default",
+      "note": "DEFAULTS TO LOCALHOST - this is not staging's redis",
+      "forbidden": null,
+      "resolved": "::1",
+      "status": "unreachable",
+      "detail": "connect ECONNREFUSED 127.0.0.1:6379"
+    },
+    {
+      "name": "zipkin",
+      "host": "localhost",
+      "port": 9411,
+      "source": "env.ts default",
+      "note": "DEFAULTS TO LOCALHOST - spans go nowhere",
+      "forbidden": null,
+      "resolved": "::1",
+      "status": "unreachable",
+      "detail": "connect ECONNREFUSED 127.0.0.1:9411"
+    },
+    {
+      "name": "github.com",
+      "host": "github.com",
+      "port": 443,
+      "source": "record.mjs allowlist — baseline.json egressHosts.fromSource",
+      "note": "opens under --live; port from REPO_URL",
+      "forbidden": null,
+      "resolved": "20.205.243.166",
+      "status": "reachable",
+      "detail": "connected"
+    },
+    {
+      "name": "langfuse.qode",
+      "host": "langfuse.qode.world",
+      "port": 443,
+      "source": "record.mjs allowlist — record.mjs LIVE_HOSTS",
+      "note": "opens under --live; port assumed 443 — the allowlist names hosts, not ports",
+      "forbidden": null,
+      "resolved": "35.227.237.208",
+      "status": "reachable",
+      "detail": "connected"
+    },
+    {
+      "name": "cloud.langfuse",
+      "host": "cloud.langfuse.com",
+      "port": 443,
+      "source": "record.mjs allowlist — record.mjs LIVE_HOSTS",
+      "note": "opens under --live; port assumed 443 — the allowlist names hosts, not ports",
+      "forbidden": null,
+      "resolved": "52.19.243.165",
+      "status": "reachable",
+      "detail": "connected"
+    },
+    {
+      "name": "api.openai",
+      "host": "api.openai.com",
+      "port": 443,
+      "source": "record.mjs allowlist — record.mjs PROVIDER_HOSTS",
+      "note": "opens under --live-providers; port assumed 443 — the allowlist names hosts, not ports",
+      "forbidden": "metered - bills per request",
+      "status": "forbidden",
+      "detail": "not dialled by design"
+    },
+    {
+      "name": "api.anthropic",
+      "host": "api.anthropic.com",
+      "port": 443,
+      "source": "record.mjs allowlist — record.mjs PROVIDER_HOSTS",
+      "note": "opens under --live-providers; port assumed 443 — the allowlist names hosts, not ports",
+      "forbidden": "metered - bills per request",
+      "status": "forbidden",
+      "detail": "not dialled by design"
+    },
+    {
+      "name": "oauth2.googleapis",
+      "host": "oauth2.googleapis.com",
+      "port": 443,
+      "source": "record.mjs allowlist — record.mjs PROVIDER_HOSTS",
+      "note": "opens under --live-providers; port assumed 443 — the allowlist names hosts, not ports",
+      "forbidden": null,
+      "resolved": "74.125.24.95",
+      "status": "reachable",
+      "detail": "connected"
+    },
+    {
+      "name": "aiplatform",
+      "host": "aiplatform.googleapis.com",
+      "port": 443,
+      "source": "record.mjs allowlist — record.mjs PROVIDER_HOSTS",
+      "note": "opens under --live-providers; port assumed 443 — the allowlist names hosts, not ports",
+      "forbidden": "metered - bills per request",
+      "status": "forbidden",
+      "detail": "not dialled by design"
+    }
+  ]
+}

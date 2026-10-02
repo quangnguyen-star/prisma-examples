@@ -1,0 +1,72 @@
+{
+  "step": "sweep",
+  "handover": {
+    "packets": 1,
+    "items": 1,
+    "bytesTotal": 321,
+    "bytesLargest": 321,
+    "brief": {
+      "budget": 25000,
+      "packets": 1,
+      "over": 0,
+      "overItems": 0,
+      "median": 321,
+      "largest": 321,
+      "measuredMax": 69204,
+      "aboveMeasured": 0,
+      "aboveMeasuredItems": 0,
+      "worst": [
+        {
+          "file": "worklist-decisions.packets/packet-01.json",
+          "items": 1,
+          "bytes": 321,
+          "timesBudget": 0
+        }
+      ],
+      "notSplit": "NOT SPLIT, DELIBERATELY. A packet is ONE FUNCTION AND ONE READING: two workers on two sides of it pay for that reading twice and can answer from readings that disagree. A split needs D47a — the second worker handed the NOTE, not the file — and a note is served from the round AFTER the one that wrote it, so inside one round there is nothing to hand it. Dealt WHOLE and named here: whole loses no work, a split that drops a side does."
+    },
+    "workers": 1,
+    "concurrency": 1,
+    "workerAgent": "charpilot-worker",
+    "roundBudgetMinutes": 45,
+    "packetMinutes": 4.1,
+    "queue": [
+      {
+        "entry": 1,
+        "packets": 1,
+        "items": 1,
+        "sources": [],
+        "files": [
+          "worklist-decisions.packets/packet-01.json"
+        ]
+      }
+    ],
+    "dealSays": "THE ROUND IS ALREADY DEALT, AS A QUEUE AND NOT AS BUNDLES. `queue` is 1 entry(ies) in LAUNCH ORDER, largest first. Launch 1 worker(s) on the first 1, hand each one the packet FILES its entry names, and THE MOMENT ONE RETURNS LAUNCH THE NEXT ENTRY. LAUNCH EVERY WORKER AS subagent_type \"charpilot-worker\" — it has no Agent tool, which is what lets this round use the whole concurrency cap. NEVER HAVE MORE THAN 1 IN FLIGHT: count launches minus returns, and launch only when that is below it. If a launch comes back \"Concurrent subagent limit reached\", that entry was NOT worked: put it back at the FRONT of the queue and launch it when the next worker returns. Do not skip it and do not leave it for next round. Do not re-sort it, do not re-deal it, and do not hand one worker several entries up front — it cannot start its second until its first is done, which is how the round's longest packet ends up waiting behind whatever landed beside it. A packet is still never split across workers: every entry hands over WHOLE packet files. MATERIALISE EACH ENTRY AS IT LANDS. Read its submission, record it and move on — do NOT hold the round's consolidation until the slowest worker is back. On run 20260918T073111Z round 5 the last worker finished at 10:25:30 and the parent was still consolidating at 10:34:48: nine minutes single-threaded with every worker idle. THE ROUND'S BUDGET IS 45 MINUTES. Keep launching until the queue is empty or the budget is spent; when it is spent, stop launching, take what has landed, SAY WHICH ENTRIES YOU NEVER LAUNCHED and end the round. They come back next round aimed by a coverage report. A round held open for one worker is the rest of the fan-out idle and no new evidence at all. EVERY ENTRY GOES TO A WORKER, AND TO ONE WORKER ONLY: 1 entry(ies), so 1 launch(es) in all, plus a relaunch only for an entry whose launch came back \"Concurrent subagent limit reached\". This holds in a small round and in a round of one entry: do NOT answer a packet yourself, and do NOT launch a second worker on an entry that already has one. A packet file is the whole job for one worker, and a second reader of it is a second reading of the same source with nothing new to find.",
+    "says": "THIS FILE IS AN INDEX AND CARRIES NO BRIEF. Each entry below names one file that is a WHOLE, SELF-CONTAINED piece of work: open it and you can answer every item in it without opening anything else and without writing a script to take it apart. The packet's roster, its reading plan and every block its items share are at the top of that file, written once. Pick the packet you are going to answer, open that one file, and answer it. The largest is 321 bytes; the whole round is 321 bytes, and you never have to read that.",
+    "asks": {
+      "sweep": {
+        "signature": "sweep-domain",
+        "repeated": 0,
+        "run": "20261002T043917Z"
+      }
+    },
+    "run": "20261002T043917Z",
+    "answered": {}
+  },
+  "packets": [
+    {
+      "file": "worklist-decisions.packets/packet-01.json",
+      "id": "alone sweep-domain",
+      "name": null,
+      "at": null,
+      "items": 1,
+      "writes": null,
+      "mayBeSplit": null,
+      "carried": 0,
+      "sides": [
+        "sweep-domain"
+      ],
+      "bytes": 321
+    }
+  ]
+}

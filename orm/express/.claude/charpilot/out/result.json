@@ -1,0 +1,72 @@
+{
+  "status": "partial",
+  "failed_reason": "8 side(s) are open - nothing covers them and no reason is written for them. A success needs every uncovered side ruled unreachable with a reason; each is in out/coverage.json stillUncovered[].ruling.",
+  "pr_url": null,
+  "partial": {
+    "salvagedBy": "workflow.mjs",
+    "salvagedAt": "2026-10-02T04:41:31.378Z",
+    "exit": 75,
+    "step": "derive",
+    "reason": null,
+    "measuredFrom": ".claude/charpilot/out/coverage.json",
+    "missing": [
+      "`derive` handed over a decision (exit 75) and is waiting on its answer, so it and the 7 step(s) after it did not finish: derive, record, determinism, emit, measure, repair, ruling, report. Nothing those steps produce is in this document.",
+      "the numbers below are what .claude/charpilot/out/coverage.json could give: 8 side(s) are open - nothing covers them and no reason is written for them. A success needs every uncovered side ruled unreachable with a reason; each is in out/coverage.json stillUncovered[].ruling.",
+      "this replaced a `partial` result.json that was older than the coverage document it was computed from, so it described a measurement that has since been replaced"
+    ],
+    "says": "This run did not reach `report`. The figures above are whatever out/coverage.json held when the walk stopped, reshaped by the same report.mjs that writes a finished result — they are real, and they are not the whole run. docker/finish.py reads `partial` as a run that measured something and did not finish: it pushes the branch, opens a pull request saying what is missing, and reports a FAILED run carrying this reason and these numbers. It did not succeed, and it is not lost either."
+  },
+  "coverage_percentage": {
+    "branches": 0,
+    "functions": 0
+  },
+  "coverage_percentage_live_code": {
+    "branches": 0,
+    "sides": "0/8",
+    "dead_export_sides_removed": 0,
+    "dead_export_sides_removed_that_were_covered": 0
+  },
+  "mode": "mocked",
+  "stretch": 97.5,
+  "env_stand_ins": [],
+  "claims": {
+    "checked": 0,
+    "verified": 0,
+    "false": 0,
+    "unmeasurable": 0
+  },
+  "missing": [],
+  "rulings": {
+    "unreachable": 0,
+    "pipeline_defect": 0,
+    "open": 8
+  },
+  "target": 96.5,
+  "target_met": false,
+  "target_note": "branch coverage is below the target for this mode - mocked: 0% against live code (0/8), raw 0% (0/8) · target 96.5% (default) · SHORT BY 96.5 point(s). The target does not move to meet the run",
+  "notes": [
+    {
+      "step": "stagingenv",
+      "id": "stagingenv:iac-not-found:prisma-rest-express",
+      "tool": "stagingenv.mjs",
+      "message": "no qode-iac checkout, and the run is mocked by request (CHARPILOT_MODE=mocked or CHARPILOT_EXPECTED_DB=none): no deployed environment was resolved, the service boots on schema stand-ins, and every boundary is answered by a double"
+    },
+    {
+      "step": "baseline",
+      "id": "baseline:runner:none:bootstrap",
+      "tool": "runner.mjs",
+      "message": "no runnable test suite (no test script, runner or test files); vitest was set up for the characterization suite (F1.7)"
+    }
+  ],
+  "runner": {
+    "runner": "none",
+    "detail": "no test script, runner or test files",
+    "action": "bootstrap",
+    "measuredByStage1": false,
+    "evidence": [
+      "0 test file(s)"
+    ],
+    "note": "no runnable test suite (no test script, runner or test files); vitest was set up for the characterization suite (F1.7)"
+  },
+  "defects_digest": "fe74feacaf131a61b77fb02310acdba0216fc6b2"
+}
