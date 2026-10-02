@@ -1,22 +1,16 @@
 {
   "stage": "5-cigate",
-  "ranAt": "2026-10-02T04:41:30.371Z",
+  "ranAt": "2026-10-02T04:44:02.444Z",
   "tests": {
     "command": "vitest run test/characterization (the repo's own config)",
-    "files": 0,
+    "files": 1,
     "failed": 0
   },
   "typecheck": {
     "skipped": "the repo declares no typecheck script"
   },
   "withheld": [],
-  "pipelineDefects": [
-    {
-      "kind": "red-without-a-failure",
-      "cause": "no-test-files",
-      "message": "vitest exited 1 and named no failed test and no unhandled error - its own exit reason: [no-test-files] vitest collected no test file (\"No test files found, exiting with code 1\"): the config's `include` matches nothing under the filter"
-    }
-  ],
+  "pipelineDefects": [],
   "measurements": [],
   "notes": [],
   "targetNode": {
@@ -27,21 +21,23 @@
     "why": null
   },
   "scope": "full",
-  "scopeWhy": "there is no record of a previous pass to build on",
+  "scopeWhy": "the walk asked for a full gate",
   "gatedFiles": [],
   "ledger": {
-    "manifest": null,
-    "specs": {},
-    "context": "0f7ba6e360589e1cdc29a3a63dd463802c84e7d5089cd2d3d4b7e101c896775b",
-    "green": false,
+    "manifest": "ba8178ef5e6f050ef4227e26a849d5b98e3c198f7dd148e2731e8fcfe3d6457b",
+    "specs": {
+      "test/characterization/index.char.test.ts": "f5c154333af274e823b2d0f2892497dc11fddc62d6098e6c6df510674641f17d"
+    },
+    "context": "90c68e3c82b614237850fb7348277bf175eefdfb29d942aef0038194c0271992",
+    "green": true,
     "scope": "full",
-    "why": "there is no record of a previous pass to build on",
+    "why": "the walk asked for a full gate",
     "files": [],
-    "at": "2026-10-02T04:41:30.371Z",
-    "fullAt": "2026-10-02T04:41:30.371Z",
+    "at": "2026-10-02T04:44:02.445Z",
+    "fullAt": "2026-10-02T04:44:02.445Z",
     "partialsSinceFull": 0,
-    "fullManifest": null,
-    "fullContext": "0f7ba6e360589e1cdc29a3a63dd463802c84e7d5089cd2d3d4b7e101c896775b",
-    "fullGreen": false
+    "fullManifest": "ba8178ef5e6f050ef4227e26a849d5b98e3c198f7dd148e2731e8fcfe3d6457b",
+    "fullContext": "90c68e3c82b614237850fb7348277bf175eefdfb29d942aef0038194c0271992",
+    "fullGreen": true
   }
 }

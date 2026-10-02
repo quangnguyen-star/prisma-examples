@@ -1,0 +1,18 @@
+{
+  "stage": "5-determinism",
+  "mode": "mocked",
+  "checkedAt": "2026-10-02T04:43:57.836Z",
+  "envProvenance": "process-env-only",
+  "rowTimeoutMs": 10000,
+  "rowTimeoutMsSource": "rows",
+  "secondObservation": "recorded (record.mjs exited 0)",
+  "secondObservationRows": 4,
+  "totals": {
+    "rowsInFirst": 4,
+    "rowsCompared": 4,
+    "rowsUnstable": 0,
+    "rowsNotCompared": 0
+  },
+  "notCompared": [],
+  "rows": []
+}

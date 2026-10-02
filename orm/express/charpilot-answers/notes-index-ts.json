@@ -1,0 +1,42 @@
+{
+  "notes": [
+    {
+      "source": "src/index.ts",
+      "entries": [
+        {
+          "fact": "Handlers are anonymous arguments of app.put/app.get at module scope; nothing is exported, so a subject needs invoke.build that imports the module.",
+          "lines": [
+            63,
+            63
+          ],
+          "kind": "observed",
+          "confidence": "verified",
+          "written_by": "worker-packet-01-02",
+          "round": 1
+        },
+        {
+          "fact": "GET /feed handler reads searchString/skip/take at line 122; ternary at 124, Number(take)||undefined at 139, Number(skip)||undefined at 140.",
+          "lines": [
+            121,
+            140
+          ],
+          "kind": "observed",
+          "confidence": "verified",
+          "written_by": "worker-packet-01-02",
+          "round": 1
+        },
+        {
+          "fact": "PUT /publish/:id handler: Number(id)||undefined at line 75 inside a try block after findUnique at 67.",
+          "lines": [
+            63,
+            77
+          ],
+          "kind": "observed",
+          "confidence": "verified",
+          "written_by": "worker-packet-01-02",
+          "round": 1
+        }
+      ]
+    }
+  ]
+}

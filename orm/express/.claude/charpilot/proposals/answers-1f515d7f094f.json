@@ -1,0 +1,106 @@
+{
+  "proposals": [
+    {
+      "id": "arg1-of-app-get-124-cond-expr-0",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "via": "trigger:http-request",
+      "lane": "integration",
+      "covers": [
+        "src/index.ts#124:cond-expr:0",
+        "src/index.ts#139:binary-expr:0",
+        "src/index.ts#140:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#124:cond-expr:0": [
+          "whenTrue"
+        ],
+        "src/index.ts#139:binary-expr:0": [
+          "Number(take)"
+        ],
+        "src/index.ts#140:binary-expr:0": [
+          "Number(skip)"
+        ]
+      },
+      "rationale": "One request with a non-empty searchString and numeric take and skip: the ternary takes its OR-filter side and both Number(...) || undefined operands are truthy numbers.",
+      "args": [
+        {
+          "build": "doubles.expressRequest({ query: { searchString: \"x\", take: \"5\", skip: \"2\", orderBy: \"asc\" } })",
+          "from": {
+            "arm": "src/index.ts#124:cond-expr:0",
+            "evidence": "src/index.ts:122",
+            "reading": "line 122 destructures searchString/skip/take from req.query; a truthy searchString takes whenTrue and numeric strings make Number(take)/Number(skip) truthy (lines 139-140)"
+          }
+        },
+        {
+          "build": "doubles.expressResponse()",
+          "from": {
+            "arm": "src/index.ts#124:cond-expr:0",
+            "evidence": "src/index.ts:124",
+            "reading": "res is only used for res.json/response recording; doubles.expressResponse records it without a socket"
+          }
+        }
+      ],
+      "boundaries": {},
+      "setup": [],
+      "invoke": {
+        "build": "await (async () => { const { vi } = await import(\"vitest\"); globalThis.__cpPrisma = doubles.prismaClient({ post: { findUnique: { resolves: { published: false } }, update: { resolves: { id: 1, published: true } }, findMany: { resolves: [] } } }); vi.doMock(\"../prisma/generated/client\", () => ({ Prisma: {}, PrismaClient: function () { return globalThis.__cpPrisma; } })); vi.doMock(\"@prisma/adapter-pg\", () => ({ PrismaPg: function () {} })); const express = (await import(\"express\")).default; const ap = express.application; const saved = { get: ap.get, listen: ap.listen }; let found; ap.get = function (p, ...f) { if (p === \"/feed\" && f.length) { found = f[f.length - 1]; return this; } return saved.get.call(this, p, ...f); }; ap.listen = function () { return {}; }; try { await import(\"@/index\"); } finally { ap.get = saved.get; ap.listen = saved.listen; } return found; })()",
+        "from": {
+          "arm": "src/index.ts#124:cond-expr:0",
+          "evidence": "src/index.ts:124",
+          "reading": "the handler is an anonymous argument of app.get at module scope; no export names it, so the build imports src/index with express's application.get patched to capture it, listen stubbed and the prisma client replaced by doubles.prismaClient"
+        }
+      }
+    },
+    {
+      "id": "arg1-of-app-get-124-cond-expr-1",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "via": "trigger:http-request",
+      "lane": "integration",
+      "covers": [
+        "src/index.ts#124:cond-expr:0",
+        "src/index.ts#139:binary-expr:0",
+        "src/index.ts#140:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#124:cond-expr:0": [
+          "whenFalse"
+        ],
+        "src/index.ts#139:binary-expr:0": [
+          "undefined"
+        ],
+        "src/index.ts#140:binary-expr:0": [
+          "undefined"
+        ]
+      },
+      "rationale": "One request with an empty query: searchString is undefined so the ternary takes {}, and Number(undefined) is NaN so both || fall to undefined.",
+      "args": [
+        {
+          "build": "doubles.expressRequest({ query: {} })",
+          "from": {
+            "arm": "src/index.ts#124:cond-expr:0",
+            "evidence": "src/index.ts:122",
+            "reading": "line 122 reads searchString/skip/take off req.query; absent they are undefined, so the ternary is falsy and Number(take)/Number(skip) are NaN (lines 139-140)"
+          }
+        },
+        {
+          "build": "doubles.expressResponse()",
+          "from": {
+            "arm": "src/index.ts#124:cond-expr:0",
+            "evidence": "src/index.ts:124",
+            "reading": "res is only used for res.json/response recording; doubles.expressResponse records it without a socket"
+          }
+        }
+      ],
+      "boundaries": {},
+      "setup": [],
+      "invoke": {
+        "build": "await (async () => { const { vi } = await import(\"vitest\"); globalThis.__cpPrisma = doubles.prismaClient({ post: { findUnique: { resolves: { published: false } }, update: { resolves: { id: 1, published: true } }, findMany: { resolves: [] } } }); vi.doMock(\"../prisma/generated/client\", () => ({ Prisma: {}, PrismaClient: function () { return globalThis.__cpPrisma; } })); vi.doMock(\"@prisma/adapter-pg\", () => ({ PrismaPg: function () {} })); const express = (await import(\"express\")).default; const ap = express.application; const saved = { get: ap.get, listen: ap.listen }; let found; ap.get = function (p, ...f) { if (p === \"/feed\" && f.length) { found = f[f.length - 1]; return this; } return saved.get.call(this, p, ...f); }; ap.listen = function () { return {}; }; try { await import(\"@/index\"); } finally { ap.get = saved.get; ap.listen = saved.listen; } return found; })()",
+        "from": {
+          "arm": "src/index.ts#124:cond-expr:0",
+          "evidence": "src/index.ts:124",
+          "reading": "the handler is an anonymous argument of app.get at module scope; no export names it, so the build imports src/index with express's application.get patched to capture it, listen stubbed and the prisma client replaced by doubles.prismaClient"
+        }
+      }
+    }
+  ]
+}

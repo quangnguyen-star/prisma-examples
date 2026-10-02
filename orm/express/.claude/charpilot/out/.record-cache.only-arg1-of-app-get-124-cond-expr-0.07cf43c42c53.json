@@ -1,0 +1,104 @@
+{
+  "recordingKey": "07cf43c42c53",
+  "rows": {
+    "arg1-of-app-get-124-cond-expr-0": {
+      "id": "arg1-of-app-get-124-cond-expr-0",
+      "file": "answers-1f515d7f094f.json",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "covers": [
+        "src/index.ts#124:cond-expr:0",
+        "src/index.ts#139:binary-expr:0",
+        "src/index.ts#140:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#124:cond-expr:0": [
+          "whenTrue"
+        ],
+        "src/index.ts#139:binary-expr:0": [
+          "Number(take)"
+        ],
+        "src/index.ts#140:binary-expr:0": [
+          "Number(skip)"
+        ]
+      },
+      "source": "recorded",
+      "clockEpoch": 1790916203220,
+      "invoked": true,
+      "returned": {
+        "$undefined": true
+      },
+      "durationMs": 562,
+      "rowTimeoutMs": 10000,
+      "console": [],
+      "boundaryCalls": [],
+      "movedBranches": {
+        "src/index.ts": {
+          "1": [
+            0
+          ],
+          "2": [
+            0
+          ],
+          "3": [
+            0
+          ]
+        }
+      },
+      "movedBranchesBeforeSubject": {},
+      "subjectCallStarted": true,
+      "armsMoved": [
+        {
+          "armId": "src/index.ts#124:cond-expr:0",
+          "file": "src/index.ts",
+          "line": 124,
+          "sides": [
+            "whenTrue"
+          ]
+        },
+        {
+          "armId": "src/index.ts#139:binary-expr:0",
+          "file": "src/index.ts",
+          "line": 139,
+          "sides": [
+            "Number(take)"
+          ]
+        },
+        {
+          "armId": "src/index.ts#140:binary-expr:0",
+          "file": "src/index.ts",
+          "line": 140,
+          "sides": [
+            "Number(skip)"
+          ]
+        }
+      ],
+      "claimVerdicts": [
+        {
+          "armId": "src/index.ts#124:cond-expr:0",
+          "side": "whenTrue",
+          "verdict": "verified"
+        },
+        {
+          "armId": "src/index.ts#139:binary-expr:0",
+          "side": "Number(take)",
+          "verdict": "verified"
+        },
+        {
+          "armId": "src/index.ts#140:binary-expr:0",
+          "side": "Number(skip)",
+          "verdict": "verified"
+        }
+      ],
+      "__fingerprint": "f8db31c8e2dd",
+      "__recordedNode": 22,
+      "__recordedBy": "1904df10763c",
+      "__recording": "1397-6158de",
+      "__sources": {
+        "roots": [
+          "src/index.ts"
+        ],
+        "digest": "a337e101a2a6"
+      }
+    }
+  }
+}

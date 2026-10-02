@@ -1,0 +1,90 @@
+{
+  "proposals": [
+    {
+      "id": "arg1-of-app-put-75-binary-expr-0",
+      "functionId": "src/index.ts:63:<arg1 of app.put>",
+      "via": "trigger:http-request",
+      "lane": "integration",
+      "covers": [
+        "src/index.ts#75:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#75:binary-expr:0": [
+          "Number(id)"
+        ]
+      },
+      "rationale": "A numeric id string makes Number(id) a nonzero number, so the left operand of || is truthy and is the value taken.",
+      "args": [
+        {
+          "build": "doubles.expressRequest({ params: { id: \"1\" } })",
+          "from": {
+            "arm": "src/index.ts#75:binary-expr:0",
+            "evidence": "src/index.ts:75",
+            "reading": "Number(id) || undefined takes the left side when Number(id) is truthy, e.g. id \"1\" -> 1"
+          }
+        },
+        {
+          "build": "doubles.expressResponse()",
+          "from": {
+            "arm": "src/index.ts#75:binary-expr:0",
+            "evidence": "src/index.ts:75",
+            "reading": "res is only used for res.json/response recording; doubles.expressResponse records it without a socket"
+          }
+        }
+      ],
+      "boundaries": {},
+      "setup": [],
+      "invoke": {
+        "build": "await (async () => { const { vi } = await import(\"vitest\"); globalThis.__cpPrisma = doubles.prismaClient({ post: { findUnique: { resolves: { published: false } }, update: { resolves: { id: 1, published: true } }, findMany: { resolves: [] } } }); vi.doMock(\"../prisma/generated/client\", () => ({ Prisma: {}, PrismaClient: function () { return globalThis.__cpPrisma; } })); vi.doMock(\"@prisma/adapter-pg\", () => ({ PrismaPg: function () {} })); const express = (await import(\"express\")).default; const ap = express.application; const saved = { put: ap.put, listen: ap.listen }; let found; ap.put = function (p, ...f) { if (p === \"/publish/:id\" && f.length) { found = f[f.length - 1]; return this; } return saved.put.call(this, p, ...f); }; ap.listen = function () { return {}; }; try { await import(\"@/index\"); } finally { ap.put = saved.put; ap.listen = saved.listen; } return found; })()",
+        "from": {
+          "arm": "src/index.ts#75:binary-expr:0",
+          "evidence": "src/index.ts:75",
+          "reading": "the handler is an anonymous argument of app.put at module scope; no export names it, so the build imports src/index with express's application.put patched to capture it, listen stubbed and the prisma client replaced by doubles.prismaClient"
+        }
+      }
+    },
+    {
+      "id": "arg1-of-app-put-75-binary-expr-1",
+      "functionId": "src/index.ts:63:<arg1 of app.put>",
+      "via": "trigger:http-request",
+      "lane": "integration",
+      "covers": [
+        "src/index.ts#75:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#75:binary-expr:0": [
+          "undefined"
+        ]
+      },
+      "rationale": "A non-numeric id makes Number(id) NaN, which is falsy, so || falls through to undefined.",
+      "args": [
+        {
+          "build": "doubles.expressRequest({ params: { id: \"abc\" } })",
+          "from": {
+            "arm": "src/index.ts#75:binary-expr:0",
+            "evidence": "src/index.ts:75",
+            "reading": "Number(\"abc\") is NaN, falsy, so Number(id) || undefined takes undefined"
+          }
+        },
+        {
+          "build": "doubles.expressResponse()",
+          "from": {
+            "arm": "src/index.ts#75:binary-expr:0",
+            "evidence": "src/index.ts:75",
+            "reading": "res is only used for res.json/response recording; doubles.expressResponse records it without a socket"
+          }
+        }
+      ],
+      "boundaries": {},
+      "setup": [],
+      "invoke": {
+        "build": "await (async () => { const { vi } = await import(\"vitest\"); globalThis.__cpPrisma = doubles.prismaClient({ post: { findUnique: { resolves: { published: false } }, update: { resolves: { id: 1, published: true } }, findMany: { resolves: [] } } }); vi.doMock(\"../prisma/generated/client\", () => ({ Prisma: {}, PrismaClient: function () { return globalThis.__cpPrisma; } })); vi.doMock(\"@prisma/adapter-pg\", () => ({ PrismaPg: function () {} })); const express = (await import(\"express\")).default; const ap = express.application; const saved = { put: ap.put, listen: ap.listen }; let found; ap.put = function (p, ...f) { if (p === \"/publish/:id\" && f.length) { found = f[f.length - 1]; return this; } return saved.put.call(this, p, ...f); }; ap.listen = function () { return {}; }; try { await import(\"@/index\"); } finally { ap.put = saved.put; ap.listen = saved.listen; } return found; })()",
+        "from": {
+          "arm": "src/index.ts#75:binary-expr:0",
+          "evidence": "src/index.ts:75",
+          "reading": "the handler is an anonymous argument of app.put at module scope; no export names it, so the build imports src/index with express's application.put patched to capture it, listen stubbed and the prisma client replaced by doubles.prismaClient"
+        }
+      }
+    }
+  ]
+}

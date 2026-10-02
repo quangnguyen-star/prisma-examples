@@ -9,7 +9,7 @@
       "sides": [],
       "id": "stagingenv:iac-not-found:prisma-rest-express",
       "run": "20261002T043917Z",
-      "at": "2026-10-02T04:41:27.256Z"
+      "at": "2026-10-02T04:43:41.504Z"
     },
     {
       "step": "baseline",
@@ -20,7 +20,7 @@
       "sides": [],
       "id": "baseline:runner:none:bootstrap",
       "run": "20261002T043917Z",
-      "at": "2026-10-02T04:41:27.306Z"
+      "at": "2026-10-02T04:43:41.541Z"
     }
   ]
 }

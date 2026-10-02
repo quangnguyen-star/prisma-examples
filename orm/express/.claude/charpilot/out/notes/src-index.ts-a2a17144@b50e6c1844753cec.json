@@ -1,0 +1,59 @@
+{
+  "key": "src/index.ts@b50e6c1844753cec126174414abb3a3ff8f96fcfc2472965eb108ffdbad37da3",
+  "path": "src/index.ts",
+  "source_sha": "b50e6c1844753cec126174414abb3a3ff8f96fcfc2472965eb108ffdbad37da3",
+  "source_bytes": 3412,
+  "source_lines": 154,
+  "ceiling_bytes": 1137,
+  "entries": [
+    {
+      "fact": "Handlers are anonymous arguments of app.put/app.get at module scope; nothing is exported, so a subject needs invoke.build that imports the module.",
+      "source": "src/index.ts",
+      "lines": [
+        63,
+        63
+      ],
+      "source_sha": "b50e6c1844753cec126174414abb3a3ff8f96fcfc2472965eb108ffdbad37da3",
+      "kind": "observed",
+      "confidence": "verified",
+      "written_by": "worker-packet-01-02",
+      "round": 1
+    },
+    {
+      "fact": "GET /feed handler reads searchString/skip/take at line 122; ternary at 124, Number(take)||undefined at 139, Number(skip)||undefined at 140.",
+      "source": "src/index.ts",
+      "lines": [
+        121,
+        140
+      ],
+      "source_sha": "b50e6c1844753cec126174414abb3a3ff8f96fcfc2472965eb108ffdbad37da3",
+      "kind": "observed",
+      "confidence": "verified",
+      "written_by": "worker-packet-01-02",
+      "round": 1
+    },
+    {
+      "fact": "PUT /publish/:id handler: Number(id)||undefined at line 75 inside a try block after findUnique at 67.",
+      "source": "src/index.ts",
+      "lines": [
+        63,
+        77
+      ],
+      "source_sha": "b50e6c1844753cec126174414abb3a3ff8f96fcfc2472965eb108ffdbad37da3",
+      "kind": "observed",
+      "confidence": "verified",
+      "written_by": "worker-packet-01-02",
+      "round": 1
+    }
+  ],
+  "writes": [
+    {
+      "at": "2026-10-02T04:43:44.250Z",
+      "by": "worker-packet-01-02",
+      "round": 1,
+      "added": 3,
+      "read": "full"
+    }
+  ],
+  "compactions": []
+}

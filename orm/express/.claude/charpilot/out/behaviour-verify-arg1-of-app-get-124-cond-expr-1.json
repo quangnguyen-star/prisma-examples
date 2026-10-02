@@ -1,0 +1,228 @@
+{
+  "stage": "4-behaviour",
+  "mode": "mocked",
+  "recordedAt": "2026-10-02T04:43:46.378Z",
+  "harnessVersion": "1904df10763c",
+  "recordingKey": "07cf43c42c53",
+  "recordingKeyParts": {
+    "targetNodeMajor": 22,
+    "observationVersion": 2,
+    "rowTimeoutMs": 10000,
+    "allowHosts": [],
+    "live": false,
+    "liveProviders": false,
+    "policy": "real-except-cache",
+    "envProvenance": "process-env-only",
+    "standIns": []
+  },
+  "selection": {
+    "argv": [
+      "--only",
+      "arg1-of-app-get-124-cond-expr-1"
+    ],
+    "only": "arg1-of-app-get-124-cond-expr-1",
+    "live": false,
+    "liveProviders": false,
+    "policy": "real-except-cache",
+    "rowTimeoutMs": 10000,
+    "proposalsSeen": 4,
+    "runnableSelected": 4
+  },
+  "envFile": "process env only",
+  "envProvenance": "process-env-only",
+  "standIns": [],
+  "harnessEnv": {
+    "REDIS_ENABLED": "true",
+    "REDIS_PASSWORD": "",
+    "BUILD_ID": "charpilot"
+  },
+  "target": "express",
+  "dbGuard": {
+    "denied": [
+      "@/prisma/client"
+    ],
+    "relativeUnreachable": [
+      "../prisma/generated/client"
+    ],
+    "ormModulesSeen": [
+      "../prisma/generated/client"
+    ]
+  },
+  "totals": {
+    "proposals": 4,
+    "runnable": 4,
+    "recorded": 1,
+    "harnessFailures": 0,
+    "blockedEgress": 0,
+    "notSettled": 0,
+    "notSettledBeforeSubject": 0,
+    "rowTimeoutMs": 10000,
+    "egressAfterSettle": 0,
+    "pending": 3,
+    "unrunnable": 0,
+    "notRecorded": 3,
+    "claimsChecked": 3,
+    "claimsJudgeable": 3,
+    "claimsVerified": 3,
+    "claimsFalse": 0,
+    "claimsUnmeasurable": 0,
+    "supersededRows": 0
+  },
+  "rows": [
+    {
+      "id": "arg1-of-app-get-124-cond-expr-1",
+      "file": "answers-1f515d7f094f.json",
+      "functionId": "src/index.ts:121:<arg1 of app.get>",
+      "covers": [
+        "src/index.ts#124:cond-expr:0",
+        "src/index.ts#139:binary-expr:0",
+        "src/index.ts#140:binary-expr:0"
+      ],
+      "reaches": {
+        "src/index.ts#124:cond-expr:0": [
+          "whenFalse"
+        ],
+        "src/index.ts#139:binary-expr:0": [
+          "undefined"
+        ],
+        "src/index.ts#140:binary-expr:0": [
+          "undefined"
+        ]
+      },
+      "source": "recorded",
+      "clockEpoch": 1790916208039,
+      "invoked": true,
+      "returned": {
+        "$undefined": true
+      },
+      "durationMs": 834,
+      "rowTimeoutMs": 10000,
+      "console": [],
+      "boundaryCalls": [],
+      "movedBranches": {
+        "src/index.ts": {
+          "1": [
+            1
+          ],
+          "2": [
+            0,
+            1
+          ],
+          "3": [
+            0,
+            1
+          ]
+        }
+      },
+      "movedBranchesBeforeSubject": {},
+      "subjectCallStarted": true,
+      "armsMoved": [
+        {
+          "armId": "src/index.ts#124:cond-expr:0",
+          "file": "src/index.ts",
+          "line": 124,
+          "sides": [
+            "whenFalse"
+          ]
+        },
+        {
+          "armId": "src/index.ts#139:binary-expr:0",
+          "file": "src/index.ts",
+          "line": 139,
+          "sides": [
+            "Number(take)",
+            "undefined"
+          ]
+        },
+        {
+          "armId": "src/index.ts#140:binary-expr:0",
+          "file": "src/index.ts",
+          "line": 140,
+          "sides": [
+            "Number(skip)",
+            "undefined"
+          ]
+        }
+      ],
+      "claimVerdicts": [
+        {
+          "armId": "src/index.ts#124:cond-expr:0",
+          "side": "whenFalse",
+          "verdict": "verified"
+        },
+        {
+          "armId": "src/index.ts#139:binary-expr:0",
+          "side": "undefined",
+          "verdict": "verified"
+        },
+        {
+          "armId": "src/index.ts#140:binary-expr:0",
+          "side": "undefined",
+          "verdict": "verified"
+        }
+      ],
+      "__fingerprint": "8a4b8d9841da",
+      "__recordedNode": 22,
+      "__recordedBy": "1904df10763c",
+      "__recording": "1497-093b1c",
+      "__sources": {
+        "roots": [
+          "src/index.ts"
+        ],
+        "digest": "a337e101a2a6"
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "id": "arg1-of-app-get-124-cond-expr-0",
+      "file": "answers-1f515d7f094f.json",
+      "reason": "runnable but not yet run in this session"
+    },
+    {
+      "id": "arg1-of-app-put-75-binary-expr-0",
+      "file": "answers-d03bc4a89a12.json",
+      "reason": "runnable but not yet run in this session"
+    },
+    {
+      "id": "arg1-of-app-put-75-binary-expr-1",
+      "file": "answers-d03bc4a89a12.json",
+      "reason": "runnable but not yet run in this session"
+    }
+  ],
+  "shadowed": [],
+  "rekeyed": [],
+  "droppedAnswers": [],
+  "falseClaimsAtRecordTime": [],
+  "unmeasurableClaimsAtRecordTime": [],
+  "reuse": {
+    "rows": 1,
+    "recordedThisRun": 0,
+    "takenFromArtifact": 0,
+    "recordedAgainBecause": {
+      "proposal": 0,
+      "code": 0,
+      "harnessFailure": 0,
+      "environmentSetUp": 0,
+      "verdictElsewhere": 0,
+      "cigateRed": 0
+    },
+    "why": {}
+  },
+  "environment": {
+    "causes": [],
+    "defect": null
+  },
+  "recordingComplete": true,
+  "sources": {
+    "files": {
+      "package-lock.json": "a5459abf4593",
+      "package.json": "72b3c54f849e",
+      "prisma/schema.prisma": "039a5cb84fcd",
+      "src/index.ts": "3e3b596d3c36",
+      "tsconfig.json": "3435bc848bb4",
+      "vitest.config.mts": "ed93b1577473"
+    }
+  },
+  "overwrite": null
+}

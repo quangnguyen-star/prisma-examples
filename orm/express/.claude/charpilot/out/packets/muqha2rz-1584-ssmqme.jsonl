@@ -1,0 +1,2 @@
+{"at":1790916224399,"seq":1,"pid":1584,"round":1,"packet":"packet src/index.ts:63:<arg1 of app.put>","functionId":"src/index.ts:63:<arg1 of app.put>","file":"src/index.ts","sidesDealt":2,"contextBytes":3412,"contextWeight":1,"filed":true,"sidesClosed":2,"finished":true}
+{"at":1790916224399,"seq":2,"pid":1584,"round":1,"packet":"packet src/index.ts:121:<arg1 of app.get>","functionId":"src/index.ts:121:<arg1 of app.get>","file":"src/index.ts","sidesDealt":6,"contextBytes":3412,"contextWeight":1,"filed":true,"sidesClosed":6,"finished":true}
